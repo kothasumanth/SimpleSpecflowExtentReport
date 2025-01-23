@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using TechTalk.SpecFlow;
 
 [Binding]
@@ -31,6 +32,13 @@ public class TestSteps
     public void WhenILogStepInfo(string info)
     {
         Hooks.LogStepInfo(info);
+    }
+
+    [When(@"I log step info y ""(.*)""")]
+    public void WhenILogStepYInfo(string info)
+    {
+        Hooks.LogStepInfo(info);
+        Assert.Fail("This step should fail");
     }
 
     [Then(@"the report should be generated successfully")]

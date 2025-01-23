@@ -1,5 +1,6 @@
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Gherkin.Model;
+using AventStack.ExtentReports.MarkupUtils;
 using AventStack.ExtentReports.Reporter;
 using TechTalk.SpecFlow;
 
@@ -46,12 +47,20 @@ public class Hooks
     [AfterStep]
     public void AfterStep(ScenarioContext scenarioContext)
     {
-        step.Log(Status.Pass, "Step passed");
+        if(scenarioContext.TestError != null)
+        {
+            Console.WriteLine("Error: " + scenarioContext.TestError.Message);
+            step.Log(Status.Fail, MarkupHelper.CreateLabel(scenarioContext.TestError.Message, ExtentColor.Red));
+        }
+        else
+        {
+            step.Log(Status.Pass, MarkupHelper.CreateLabel(scenarioContext.StepContext.StepInfo.Text, ExtentColor.Green));
+        }
     }
 
     public static void LogStepInfo(string info)
     {
-        step.Info(info);
+        step.Info( info);
     }
 
     [AfterTestRun]

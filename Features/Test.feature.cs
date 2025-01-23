@@ -162,7 +162,7 @@ namespace SpecFlowBDDAutomationFramework.Features
     testRunner.And("I create a step named \"Sample Step\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 17
-    testRunner.And("I log step info \"This is a sample step info\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I log step info y \"This is a sample step info\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 18
     testRunner.Then("the report should be generated successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
