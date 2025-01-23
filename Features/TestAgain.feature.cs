@@ -156,7 +156,7 @@ namespace SpecFlowBDDAutomationFramework.Features
     testRunner.When("I create a feature named \"Sample Feature\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 15
-    testRunner.And("I create a scenario named \"Sample Scenario\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I create a scenario named y \"Sample Scenario\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 16
     testRunner.And("I create a step named \"Sample Step\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

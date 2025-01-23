@@ -52,10 +52,10 @@ public class Hooks
             Console.WriteLine("Error: " + scenarioContext.TestError.Message);
             step.Log(Status.Fail, MarkupHelper.CreateLabel(scenarioContext.TestError.Message, ExtentColor.Red));
         }
-        else
-        {
-            step.Log(Status.Pass, MarkupHelper.CreateLabel(scenarioContext.StepContext.StepInfo.Text, ExtentColor.Green));
-        }
+        // else
+        // {
+        //     step.Log(Status.Pass, MarkupHelper.CreateLabel(scenarioContext.StepContext.StepInfo.Text, ExtentColor.Green));
+        // }
     }
 
     public static void LogStepInfo(string info)
