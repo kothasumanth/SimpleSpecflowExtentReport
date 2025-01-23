@@ -1,4 +1,4 @@
-### SpecFlow Selenium C# BDD Automation Framework from Scratch -
+### SpecFlow Selenium C# BDD Automation Framework for Demoing Extent Report Capabilities
 
 ### Contents
 
