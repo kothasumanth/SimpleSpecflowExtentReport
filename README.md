@@ -45,6 +45,6 @@
 ### Add or Attach screenshot into Extent Report when test script failed
 ![image](https://user-images.githubusercontent.com/22426896/215818156-046fca68-3112-4e8b-ab81-a17c23913d41.png)
 
-
+![alt text](image.png)
 
 # HAPPY learning!!!

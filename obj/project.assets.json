@@ -6673,11 +6673,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\vscode\\ExtentReportSample\\SpecFlowBDDAutomationFramework\\SpecFlowBDDAutomationFramework.csproj",
+      "projectUniqueName": "D:\\vscode\\SimpleSpecflowExtentReport\\SpecFlowBDDAutomationFramework.csproj",
       "projectName": "SpecFlowBDDAutomationFramework",
-      "projectPath": "D:\\vscode\\ExtentReportSample\\SpecFlowBDDAutomationFramework\\SpecFlowBDDAutomationFramework.csproj",
+      "projectPath": "D:\\vscode\\SimpleSpecflowExtentReport\\SpecFlowBDDAutomationFramework.csproj",
       "packagesPath": "C:\\Users\\kotha_ev\\.nuget\\packages\\",
-      "outputPath": "D:\\vscode\\ExtentReportSample\\SpecFlowBDDAutomationFramework\\obj\\",
+      "outputPath": "D:\\vscode\\SimpleSpecflowExtentReport\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kotha_ev\\AppData\\Roaming\\NuGet\\NuGet.Config"
