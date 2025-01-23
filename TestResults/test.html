@@ -35,7 +35,7 @@
   <ul class="nav-right">
    <li class="m-r-10"><a href="#"><span class="badge badge-primary">Automation Status Report</span></a></li>
    <li class="m-r-10">
-    <a href="#"><span class="badge badge-primary">23/01/2025 19:44:04</span></a>
+    <a href="#"><span class="badge badge-primary">23/01/2025 21:12:00</span></a>
    </li>
   </ul>
  </div>
@@ -71,7 +71,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
           <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
- <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>  <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>             <div class="dropdown-divider"></div>
+ <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>             <div class="dropdown-divider"></div>
             <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
           </ul>
         </li>
@@ -79,25 +79,25 @@
     </div>
     <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item" status="pass" test-id="1"
+        <li class="test-item" status="fail" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">SampleFeatureAgain</p>
             <p class="text-sm">
-              <span>19:44:04</span> / <span>0h:0m:0s+028ms</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>21:12:00</span> / <span>0h:0m:0s+062ms</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
             <div class="detail-head">
               <div class="p-v-10">
                 <div class="info">
-                  <h5 class="test-status text-pass">SampleFeatureAgain</h5>
-                  <span class='badge badge-success'>23/01/2025 19:44:04</span>
-                  <span class='badge badge-danger'>23/01/2025 19:44:04</span>
-                  <span class='badge badge-default'>0h:0m:0s+028ms</span>
+                  <h5 class="test-status text-fail">SampleFeatureAgain</h5>
+                  <span class='badge badge-success'>23/01/2025 21:12:00</span>
+                  <span class='badge badge-danger'>23/01/2025 21:12:00</span>
+                  <span class='badge badge-default'>0h:0m:0s+062ms</span>
                   &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
                   <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
                   <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -122,7 +122,9 @@
                     <span>Given I have initialized the ExtentReport</span>
                     
     <div>
-<span class='badge white-text green'>I have initialized the ExtentReport</span>    </div>
+Given step info    </div>
+    <div>
+I am coming from Pages.cs    </div>
 
                     
 
@@ -131,7 +133,9 @@
                     <span>Given I create a feature named "Sample Feature"</span>
                     
     <div>
-<span class='badge white-text green'>I create a feature named "Sample Feature"</span>    </div>
+When step info 2    </div>
+    <div>
+I am coming from Pages.cs    </div>
 
                     
 
@@ -140,7 +144,7 @@
                     <span>Given I create a scenario named "Sample Scenario"</span>
                     
     <div>
-<span class='badge white-text green'>I create a scenario named "Sample Scenario"</span>    </div>
+When step info 1    </div>
 
                     
 
@@ -149,7 +153,7 @@
                     <span>Given I create a step named "Sample Step"</span>
                     
     <div>
-<span class='badge white-text green'>I create a step named "Sample Step"</span>    </div>
+When step info    </div>
 
                     
 
@@ -159,8 +163,6 @@
                     
     <div>
 This is a sample step info    </div>
-    <div>
-<span class='badge white-text green'>I log step info "This is a sample step info"</span>    </div>
 
                     
 
@@ -168,8 +170,6 @@ This is a sample step info    </div>
                   <div class="step pass-bg" title="">
                     <span>Given the report should be generated successfully</span>
                     
-    <div>
-<span class='badge white-text green'>the report should be generated successfully</span>    </div>
 
                     
 
@@ -180,10 +180,10 @@ This is a sample step info    </div>
       <div class="card">
         <div class="card-header" role="tab">
           <div class="card-title">
-            <div class="node" id="9"><span class="badge log pass-bg mr-2">Pass</span>Scenario: SampleScenario3</div>
+            <div class="node" id="9"><span class="badge log fail-bg mr-2">Fail</span>Scenario: SampleScenario3</div>
           </div>
         </div>
-            <div class="collapse">
+            <div class="">
               <div class="card-body">
                 
 
@@ -191,7 +191,9 @@ This is a sample step info    </div>
                     <span>Given I have initialized the ExtentReport</span>
                     
     <div>
-<span class='badge white-text green'>I have initialized the ExtentReport</span>    </div>
+Given step info    </div>
+    <div>
+I am coming from Pages.cs    </div>
 
                     
 
@@ -200,45 +202,20 @@ This is a sample step info    </div>
                     <span>Given I create a feature named "Sample Feature"</span>
                     
     <div>
-<span class='badge white-text green'>I create a feature named "Sample Feature"</span>    </div>
+When step info 2    </div>
+    <div>
+I am coming from Pages.cs    </div>
 
                     
 
                   </div>
-                  <div class="step pass-bg" title="">
-                    <span>Given I create a scenario named "Sample Scenario"</span>
+                  <div class="step fail-bg" title="">
+                    <span>Given I create a scenario named y "Sample Scenario"</span>
                     
     <div>
-<span class='badge white-text green'>I create a scenario named "Sample Scenario"</span>    </div>
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>Given I create a step named "Sample Step"</span>
-                    
+When step info 1    </div>
     <div>
-<span class='badge white-text green'>I create a step named "Sample Step"</span>    </div>
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>Given I log step info "This is a sample step info"</span>
-                    
-    <div>
-This is a sample step info    </div>
-    <div>
-<span class='badge white-text green'>I log step info "This is a sample step info"</span>    </div>
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>Given the report should be generated successfully</span>
-                    
-    <div>
-<span class='badge white-text green'>the report should be generated successfully</span>    </div>
+<span class='badge white-text red'>This step should fail</span>    </div>
 
                     
 
@@ -249,14 +226,14 @@ This is a sample step info    </div>
   </div>
            </div>
         </li>
-        <li class="test-item" status="fail" test-id="16"
+        <li class="test-item" status="fail" test-id="13"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">SampleFeature</p>
             <p class="text-sm">
-              <span>19:44:04</span> / <span>0h:0m:0s+031ms</span>
+              <span>21:12:00</span> / <span>0h:0m:0s+004ms</span>
               <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
@@ -265,10 +242,10 @@ This is a sample step info    </div>
               <div class="p-v-10">
                 <div class="info">
                   <h5 class="test-status text-fail">SampleFeature</h5>
-                  <span class='badge badge-success'>23/01/2025 19:44:04</span>
-                  <span class='badge badge-danger'>23/01/2025 19:44:04</span>
-                  <span class='badge badge-default'>0h:0m:0s+031ms</span>
-                  &middot; <span class='uri-anchor badge badge-default'>#test-id=16</span>
+                  <span class='badge badge-success'>23/01/2025 21:12:00</span>
+                  <span class='badge badge-danger'>23/01/2025 21:12:00</span>
+                  <span class='badge badge-default'>0h:0m:0s+004ms</span>
+                  &middot; <span class='uri-anchor badge badge-default'>#test-id=13</span>
                   <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
                   <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
                   <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
@@ -281,7 +258,7 @@ This is a sample step info    </div>
       <div class="card">
         <div class="card-header" role="tab">
           <div class="card-title">
-            <div class="node" id="17"><span class="badge log pass-bg mr-2">Pass</span>Scenario: SampleScenario</div>
+            <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>Scenario: SampleScenario</div>
           </div>
         </div>
             <div class="collapse">
@@ -292,7 +269,9 @@ This is a sample step info    </div>
                     <span>Given I have initialized the ExtentReport</span>
                     
     <div>
-<span class='badge white-text green'>I have initialized the ExtentReport</span>    </div>
+Given step info    </div>
+    <div>
+I am coming from Pages.cs    </div>
 
                     
 
@@ -301,7 +280,9 @@ This is a sample step info    </div>
                     <span>Given I create a feature named "Sample Feature"</span>
                     
     <div>
-<span class='badge white-text green'>I create a feature named "Sample Feature"</span>    </div>
+When step info 2    </div>
+    <div>
+I am coming from Pages.cs    </div>
 
                     
 
@@ -310,7 +291,7 @@ This is a sample step info    </div>
                     <span>Given I create a scenario named "Sample Scenario"</span>
                     
     <div>
-<span class='badge white-text green'>I create a scenario named "Sample Scenario"</span>    </div>
+When step info 1    </div>
 
                     
 
@@ -319,7 +300,7 @@ This is a sample step info    </div>
                     <span>Given I create a step named "Sample Step"</span>
                     
     <div>
-<span class='badge white-text green'>I create a step named "Sample Step"</span>    </div>
+When step info    </div>
 
                     
 
@@ -329,8 +310,6 @@ This is a sample step info    </div>
                     
     <div>
 This is a sample step info    </div>
-    <div>
-<span class='badge white-text green'>I log step info "This is a sample step info"</span>    </div>
 
                     
 
@@ -338,8 +317,6 @@ This is a sample step info    </div>
                   <div class="step pass-bg" title="">
                     <span>Given the report should be generated successfully</span>
                     
-    <div>
-<span class='badge white-text green'>the report should be generated successfully</span>    </div>
 
                     
 
@@ -350,7 +327,7 @@ This is a sample step info    </div>
       <div class="card">
         <div class="card-header" role="tab">
           <div class="card-title">
-            <div class="node" id="24"><span class="badge log fail-bg mr-2">Fail</span>Scenario: SampleScenario1</div>
+            <div class="node" id="21"><span class="badge log fail-bg mr-2">Fail</span>Scenario: SampleScenario1</div>
           </div>
         </div>
             <div class="">
@@ -361,7 +338,9 @@ This is a sample step info    </div>
                     <span>Given I have initialized the ExtentReport</span>
                     
     <div>
-<span class='badge white-text green'>I have initialized the ExtentReport</span>    </div>
+Given step info    </div>
+    <div>
+I am coming from Pages.cs    </div>
 
                     
 
@@ -370,7 +349,9 @@ This is a sample step info    </div>
                     <span>Given I create a feature named "Sample Feature"</span>
                     
     <div>
-<span class='badge white-text green'>I create a feature named "Sample Feature"</span>    </div>
+When step info 2    </div>
+    <div>
+I am coming from Pages.cs    </div>
 
                     
 
@@ -379,7 +360,7 @@ This is a sample step info    </div>
                     <span>Given I create a scenario named "Sample Scenario"</span>
                     
     <div>
-<span class='badge white-text green'>I create a scenario named "Sample Scenario"</span>    </div>
+When step info 1    </div>
 
                     
 
@@ -388,7 +369,7 @@ This is a sample step info    </div>
                     <span>Given I create a step named "Sample Step"</span>
                     
     <div>
-<span class='badge white-text green'>I create a step named "Sample Step"</span>    </div>
+When step info    </div>
 
                     
 
@@ -428,25 +409,25 @@ This is a sample step info    </div>
     <div class="col-md-3">
       <div class="card"><div class="card-body">
           <p class="m-b-0">Started</p>
-          <h3>23/01/2025 19:44:04</h3>
+          <h3>23/01/2025 21:12:00</h3>
       </div></div>
     </div>
     <div class="col-md-3">
       <div class="card"><div class="card-body">
           <p class="m-b-0">Ended</p>
-          <h3>23/01/2025 19:44:04</h3>
+          <h3>23/01/2025 21:12:00</h3>
       </div></div>
     </div>
     <div class="col-md-3">
       <div class="card"><div class="card-body">
           <p class="m-b-0 text-pass">Features Passed</p>
-          <h3>1</h3>
+          <h3>0</h3>
       </div></div>
     </div>
     <div class="col-md-3">
       <div class="card"><div class="card-body">
           <p class="m-b-0 text-fail">Features Failed</p>
-          <h3>1</h3>
+          <h3>2</h3>
       </div></div>
     </div>
   </div>
@@ -463,11 +444,11 @@ This is a sample step info    </div>
         </div>
         <div class="card-footer">
           <div><small data-tooltip='0%'>
-            <b>1</b> features passed
+            <b>0</b> features passed
             </small>
           </div>
           <div>
-            <small data-tooltip='0%'><b>1</b> features failed, 
+            <small data-tooltip='1%'><b>2</b> features failed, 
             <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
             </small>
           </div>
@@ -485,9 +466,9 @@ This is a sample step info    </div>
           </div>
         </div>
         <div class="card-footer">
-          <div><small data-tooltip='0%'><b>3</b> scenarios passed</small></div>
+          <div><small data-tooltip='0%'><b>2</b> scenarios passed</small></div>
           <div>
-            <small data-tooltip='0%'><b>1</b> scenarios failed, 
+            <small data-tooltip='0%'><b>2</b> scenarios failed, 
             <b>0</b> skipped, <b data-tooltip='%'>0</b> others
             </small>
           </div>
@@ -503,7 +484,7 @@ This is a sample step info    </div>
     </div>
   </div></div>
   <script>
-	var timeline = { "SampleFeatureAgain":28.9662,"SampleFeature":31.1366 };
+	var timeline = { "SampleFeatureAgain":62.9657,"SampleFeature":4.826 };
   </script>
   <div class="row">
   </div>
@@ -512,13 +493,13 @@ This is a sample step info    </div>
   var statusGroup = {
     parentCount: 2,
     childCount: 4,
-    grandChildCount: 23,
-    eventsCount: 27,
+    grandChildCount: 20,
+    eventsCount: 28,
 
-passParent:1,failParent:1,warningParent:0,skipParent:0,    
-passChild:3,failChild:1,warningChild:0,skipChild:0,infoChild:0,    
-passGrandChild:22,failGrandChild:1,warningGrandChild:0,skipGrandChild:0,infoGrandChild:0,    
-passEvents:22,failEvents:1,warningEvents:0,skipEvents:0,infoEvents:4,  };
+passParent:0,failParent:2,warningParent:0,skipParent:0,    
+passChild:2,failChild:2,warningChild:0,skipChild:0,infoChild:0,    
+passGrandChild:18,failGrandChild:2,warningGrandChild:0,skipGrandChild:0,infoGrandChild:0,    
+passEvents:0,failEvents:2,warningEvents:0,skipEvents:0,infoEvents:26,  };
 </script>
 
     </div>
