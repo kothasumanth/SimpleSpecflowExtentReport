@@ -10,7 +10,7 @@ namespace SimpleSpecflowExtentReport.Utility
     public class ExtentReport
     {
         public static String dir = AppDomain.CurrentDomain.BaseDirectory;
-        public static String testResultPath = dir.Replace("bin\\Debug\\net6.0", "TestResults");
+        public static string testResultPath = Directory.GetParent(dir).Parent.Parent.Parent.FullName + "\\TestResults\\";
         private static ExtentReports extent;
         private static ExtentTest feature;
         private static ExtentTest scenario;
@@ -18,16 +18,22 @@ namespace SimpleSpecflowExtentReport.Utility
 
         public static void ExtentReportInit()
         {
-            var htmlReporter = new ExtentSparkReporter(testResultPath + "test.html");
-            htmlReporter.Config.ReportName = "Automation Status Report";
-            htmlReporter.Config.DocumentTitle = "Automation Status Report";
-            htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Config.Theme.Standard;
+            try
+            {
+                var configPath = Directory.GetParent(dir).Parent.Parent.Parent.FullName + "\\extent-config.xml";
+                var sparkReporter = new ExtentSparkReporter(testResultPath + "index.html");
+                sparkReporter.LoadConfig(configPath);
 
-            extent = new ExtentReports();
-            extent.AttachReporter(htmlReporter);
-            extent.AddSystemInfo("Environment", "QA");
-            extent.AddSystemInfo("Browser", "Edge");
-            extent.AddSystemInfo("OS", "Windows 10");
+                extent = new ExtentReports();
+                // Add system info (optional)
+                extent.AddSystemInfo("Browser", "Edge");
+                extent.AddSystemInfo("Tester", "s_kotha@qatarenergy.qa");
+                extent.AttachReporter(sparkReporter);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error loading config: " + ex.Message);
+            }
         }
 
         public static void AddFeature(FeatureContext featureContext)
@@ -37,7 +43,7 @@ namespace SimpleSpecflowExtentReport.Utility
 
         public static void AddScenario(ScenarioContext scenarioContext)
         {
-            
+
             scenario = feature.CreateNode<Scenario>(scenarioContext.ScenarioInfo.Title);
         }
 
