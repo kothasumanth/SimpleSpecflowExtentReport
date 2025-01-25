@@ -1,71 +1,96 @@
-using AventStack.ExtentReports;
-using AventStack.ExtentReports.Gherkin.Model;
-using AventStack.ExtentReports.MarkupUtils;
-using AventStack.ExtentReports.Reporter;
-using TechTalk.SpecFlow;
+using BoDi;
+using OpenQA.Selenium.Edge;
+using OpenQA.Selenium;
+using SimpleSpecflowExtentReport.Utility;
 
-[Binding]
-public class Hooks
+namespace SimpleSpecflowExtentReport.Hooks
 {
-    public static String dir = AppDomain.CurrentDomain.BaseDirectory;
-    public static String testResultPath = dir.Replace("bin\\Debug\\net6.0", "TestResults");
-    private static ExtentReports extent;
-    private static ExtentTest feature;
-    private static ExtentTest scenario;
-    private static ExtentTest step;
 
-    [BeforeTestRun]
-    public static void ExtentReportInit()
+    [Binding]
+    public sealed class Hooks : ExtentReport
     {
-        var htmlReporter = new ExtentSparkReporter(testResultPath + "test.html");
-        htmlReporter.Config.ReportName = "Automation Status Report";
-        htmlReporter.Config.DocumentTitle = "Automation Status Report";
-        htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Config.Theme.Dark;
+        private readonly IObjectContainer _container;
+        public static String dir = AppDomain.CurrentDomain.BaseDirectory;
+        public static String testResultPath = dir.Replace("bin\\Debug\\net6.0", "TestResults");
 
-        extent = new ExtentReports();
-        extent.AttachReporter(htmlReporter);
-    }
-
-    [BeforeFeature]
-    public static void CreateFeature(FeatureContext featureContext)
-    {
-        feature = extent.CreateTest<Feature>(featureContext.FeatureInfo.Title);
-    }
-
-    [BeforeScenario]
-    public static void CreateScenario(ScenarioContext scenarioContext)
-    {
-        scenario = feature.CreateNode<Scenario>(scenarioContext.ScenarioInfo.Title);
-    }
-
-    [BeforeStep]
-    public void BeforeStep(ScenarioContext scenarioContext)
-    {
-        step = scenario.CreateNode<Given>(scenarioContext.StepContext.StepInfo.Text);
-    }
-
-    [AfterStep]
-    public void AfterStep(ScenarioContext scenarioContext)
-    {
-        if(scenarioContext.TestError != null)
+        public Hooks(IObjectContainer container)
         {
-            Console.WriteLine("Error: " + scenarioContext.TestError.Message);
-            step.Log(Status.Fail, MarkupHelper.CreateLabel(scenarioContext.TestError.Message, ExtentColor.Red));
+            _container = container;
         }
-        // else
-        // {
-        //     step.Log(Status.Pass, MarkupHelper.CreateLabel(scenarioContext.StepContext.StepInfo.Text, ExtentColor.Green));
-        // }
-    }
 
-    public static void LogStepInfo(string info)
-    {
-        step.Info( info);
-    }
+        [BeforeTestRun]
+        public static void BeforeTestRun()
+        {
+            ExtentReport.ExtentReportInit();
+        }
 
-    [AfterTestRun]
-    public static void FlushReport()
-    {
-        extent.Flush();
+        [BeforeFeature]
+        public static void CreateFeature(FeatureContext featureContext)
+        {
+            ExtentReport.AddFeature(featureContext);
+        }
+
+        [BeforeScenario]
+        public void BeforeScenario(ScenarioContext scenarioContext)
+        {
+
+            //Launch the browser
+            EdgeOptions edgeOptions = new EdgeOptions();
+            // edgeOptions.UseChromium = true;
+            // edgeOptions.AddArgument("headless");
+            // edgeOptions.AddArgument("disable-gpu");
+            // edgeOptions.AddArgument("no-sandbox");
+            // edgeOptions.AddArgument("disable-dev-shm-usage");
+            // edgeOptions.AddArgument("disable-extensions");
+            // edgeOptions.AddArgument("disable-infobars");
+            // edgeOptions.AddArgument("disable-popup-blocking");
+            // edgeOptions.AddArgument("disable-notifications");
+            // edgeOptions.AddArgument("disable-extensions-except");
+            // edgeOptions.AddArgument("enable-automation");
+            // edgeOptions.AddArgument("start-maximized");
+            IWebDriver driver = new EdgeDriver(edgeOptions);
+
+            _container.RegisterInstanceAs<IWebDriver>(driver);
+            ExtentReport.AddScenario(scenarioContext);
+        }
+
+        [AfterScenario]
+        public void AfterScenario(ScenarioContext scenarioContext)
+        {
+            //Take screenshot
+            var driver = _container.Resolve<IWebDriver>();
+            if (driver != null)
+            {
+                driver.Quit();
+            }
+        }
+
+        [BeforeStep]
+        public void BeforeStep(ScenarioContext scenarioContext)
+        {
+            ExtentReport.AddStep(scenarioContext);
+
+        }
+
+        [AfterStep]
+        public void AfterStep(ScenarioContext scenarioContext)
+        {
+            string stepType = scenarioContext.StepContext.StepInfo.StepDefinitionType.ToString();
+            string stepName = scenarioContext.StepContext.StepInfo.Text;
+            var driver = _container.Resolve<IWebDriver>();
+            if (scenarioContext.TestError != null)
+            {
+                ExtentReport.LogStepInfo("fail", scenarioContext.TestError.Message);
+                //Take screenshot
+                ExtentReport.LogScreenshot(driver, scenarioContext);
+            }
+        }
+
+
+        [AfterTestRun]
+        public static void FlushReport()
+        {
+            ExtentReport.Flush();
+        }
     }
 }
