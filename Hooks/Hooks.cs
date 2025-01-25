@@ -33,6 +33,7 @@ namespace SimpleSpecflowExtentReport.Hooks
         [BeforeScenario]
         public void BeforeScenario(ScenarioContext scenarioContext)
         {
+
             //Launch the browser
             EdgeOptions edgeOptions = new EdgeOptions();
             // edgeOptions.UseChromium = true;
@@ -48,6 +49,7 @@ namespace SimpleSpecflowExtentReport.Hooks
             // edgeOptions.AddArgument("enable-automation");
             // edgeOptions.AddArgument("start-maximized");
             IWebDriver driver = new EdgeDriver(edgeOptions);
+
             _container.RegisterInstanceAs<IWebDriver>(driver);
             ExtentReport.AddScenario(scenarioContext);
         }
@@ -73,14 +75,14 @@ namespace SimpleSpecflowExtentReport.Hooks
         [AfterStep]
         public void AfterStep(ScenarioContext scenarioContext)
         {
-           string stepType = scenarioContext.StepContext.StepInfo.StepDefinitionType.ToString();
-           string stepName = scenarioContext.StepContext.StepInfo.Text;
-           var driver = _container.Resolve<IWebDriver>();
+            string stepType = scenarioContext.StepContext.StepInfo.StepDefinitionType.ToString();
+            string stepName = scenarioContext.StepContext.StepInfo.Text;
+            var driver = _container.Resolve<IWebDriver>();
             if (scenarioContext.TestError != null)
             {
                 ExtentReport.LogStepInfo("fail", scenarioContext.TestError.Message);
                 //Take screenshot
-                ExtentReport.LogScreenshot(driver,scenarioContext);
+                ExtentReport.LogScreenshot(driver, scenarioContext);
             }
         }
 

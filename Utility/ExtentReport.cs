@@ -37,6 +37,7 @@ namespace SimpleSpecflowExtentReport.Utility
 
         public static void AddScenario(ScenarioContext scenarioContext)
         {
+            
             scenario = feature.CreateNode<Scenario>(scenarioContext.ScenarioInfo.Title);
         }
 

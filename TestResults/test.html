@@ -35,7 +35,7 @@
   <ul class="nav-right">
    <li class="m-r-10"><a href="#"><span class="badge badge-primary">Automation Status Report</span></a></li>
    <li class="m-r-10">
-    <a href="#"><span class="badge badge-primary">25/01/2025 15:25:20</span></a>
+    <a href="#"><span class="badge badge-primary">25/01/2025 16:54:41</span></a>
    </li>
   </ul>
  </div>
@@ -71,7 +71,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
           <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
- <a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>             <div class="dropdown-divider"></div>
+ <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>             <div class="dropdown-divider"></div>
             <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
           </ul>
         </li>
@@ -79,25 +79,25 @@
     </div>
     <div class="test-list-wrapper scrollable">
       <ul class="test-list-item">
-        <li class="test-item" status="fail" test-id="1"
+        <li class="test-item" status="pass" test-id="1"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Calculate addition of two numbers</p>
+            <p class="name">Launch webpage and validate some elements</p>
             <p class="text-sm">
-              <span>15:25:20</span> / <span>0h:0m:26s+637ms</span>
-              <span class="badge fail-bg log float-right">Fail</span>
+              <span>16:54:41</span> / <span>0h:0m:21s+412ms</span>
+              <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
           <div class="test-contents d-none">
             <div class="detail-head">
               <div class="p-v-10">
                 <div class="info">
-                  <h5 class="test-status text-fail">Calculate addition of two numbers</h5>
-                  <span class='badge badge-success'>25/01/2025 15:25:20</span>
-                  <span class='badge badge-danger'>25/01/2025 15:25:47</span>
-                  <span class='badge badge-default'>0h:0m:26s+637ms</span>
+                  <h5 class="test-status text-pass">Launch webpage and validate some elements</h5>
+                  <span class='badge badge-success'>25/01/2025 16:54:41</span>
+                  <span class='badge badge-danger'>25/01/2025 16:55:03</span>
+                  <span class='badge badge-default'>0h:0m:21s+412ms</span>
                   &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
                   <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
                   <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -111,7 +111,7 @@
       <div class="card">
         <div class="card-header" role="tab">
           <div class="card-title">
-            <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Scenario: Validate addition of two numbers</div>
+            <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Scenario: Launch the browser and validate the elements</div>
           </div>
         </div>
             <div class="collapse">
@@ -119,512 +119,24 @@
                 
 
                   <div class="step pass-bg" title="">
-                    <span>Given I have entered "5" and "10"</span>
+                    <span>Given Login to the webpage</span>
                     
 
                     
 
                   </div>
                   <div class="step pass-bg" title="">
-                    <span>When I press add</span>
+                    <span>When i navigate to some page</span>
                     
 
                     
 
                   </div>
                   <div class="step pass-bg" title="">
-                    <span>Then the result should be "15"</span>
+                    <span>Then element should have this</span>
                     
 
                     
-
-                  </div>
-              </div>
-            </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab">
-          <div class="card-title">
-            <div class="node" id="6"><span class="badge log fail-bg mr-2">Fail</span>Scenario: Validate addition of two numbers</div>
-          </div>
-        </div>
-            <div class="">
-              <div class="card-body">
-                
-
-                  <div class="step pass-bg" title="">
-                    <span>Given I have entered "-5" and "-10"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I press add</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step fail-bg" title="">
-                    <span>Then the result should be "-1"</span>
-                    
-    <div>
-<span class='badge white-text red'>2025-01-25 15:25:28 - FAIL -   Expected string length 2 but was 3. Strings differ at index 2.
-  Expected: "-1"
-  But was:  "-15"
-  -------------^
-</span>    </div>
-
-                    
-
-  <div class="row mb-3">
-   <div class="col-md-3">
-     <img data-featherlight='D:\vscode\SimpleSpecflowExtentReport\TestResults\Validate addition of two numbers.png' src="D:\vscode\SimpleSpecflowExtentReport\TestResults\Validate addition of two numbers.png">
-  </div>
- </div>
-
-                  </div>
-              </div>
-            </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab">
-          <div class="card-title">
-            <div class="node" id="10"><span class="badge log pass-bg mr-2">Pass</span>Scenario: Validate addition of two numbers</div>
-          </div>
-        </div>
-            <div class="collapse">
-              <div class="card-body">
-                
-
-                  <div class="step pass-bg" title="">
-                    <span>Given I have entered "-5" and "10"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I press add</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>Then the result should be "5"</span>
-                    
-
-                    
-
-                  </div>
-              </div>
-            </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab">
-          <div class="card-title">
-            <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>Scenario: Validate addition of two numbers</div>
-          </div>
-        </div>
-            <div class="collapse">
-              <div class="card-body">
-                
-
-                  <div class="step pass-bg" title="">
-                    <span>Given I have entered "5" and "-10"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I press add</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>Then the result should be "-5"</span>
-                    
-
-                    
-
-                  </div>
-              </div>
-            </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab">
-          <div class="card-title">
-            <div class="node" id="18"><span class="badge log pass-bg mr-2">Pass</span>Scenario: Validate addition of two numbers</div>
-          </div>
-        </div>
-            <div class="collapse">
-              <div class="card-body">
-                
-
-                  <div class="step pass-bg" title="">
-                    <span>Given I have entered "abc" and "10"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I press add</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>Then the result should be "Please enter valid numbers"</span>
-                    
-
-                    
-
-                  </div>
-              </div>
-            </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab">
-          <div class="card-title">
-            <div class="node" id="22"><span class="badge log pass-bg mr-2">Pass</span>Scenario: Validate addition of two numbers</div>
-          </div>
-        </div>
-            <div class="collapse">
-              <div class="card-body">
-                
-
-                  <div class="step pass-bg" title="">
-                    <span>Given I have entered "5" and "xyz"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I press add</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>Then the result should be "Please enter valid numbers"</span>
-                    
-
-                    
-
-                  </div>
-              </div>
-            </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab">
-          <div class="card-title">
-            <div class="node" id="26"><span class="badge log pass-bg mr-2">Pass</span>Scenario: Validate addition of two numbers</div>
-          </div>
-        </div>
-            <div class="collapse">
-              <div class="card-body">
-                
-
-                  <div class="step pass-bg" title="">
-                    <span>Given I have entered "abc" and "xyz"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I press add</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>Then the result should be "Please enter valid numbers"</span>
-                    
-
-                    
-
-                  </div>
-              </div>
-            </div>
-      </div>
-  </div>
-           </div>
-        </li>
-        <li class="test-item" status="fail" test-id="30"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">SampleFeatureAgain</p>
-            <p class="text-sm">
-              <span>15:25:50</span> / <span>0h:0m:5s+897ms</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-            <div class="detail-head">
-              <div class="p-v-10">
-                <div class="info">
-                  <h5 class="test-status text-fail">SampleFeatureAgain</h5>
-                  <span class='badge badge-success'>25/01/2025 15:25:50</span>
-                  <span class='badge badge-danger'>25/01/2025 15:25:56</span>
-                  <span class='badge badge-default'>0h:0m:5s+897ms</span>
-                  &middot; <span class='uri-anchor badge badge-default'>#test-id=30</span>
-                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-                </div>
-              </div>
-            </div>
-
-
-  <div class="accordion mt-4">
-      <div class="card">
-        <div class="card-header" role="tab">
-          <div class="card-title">
-            <div class="node" id="31"><span class="badge log pass-bg mr-2">Pass</span>Scenario: SampleScenario2</div>
-          </div>
-        </div>
-            <div class="collapse">
-              <div class="card-body">
-                
-
-                  <div class="step pass-bg" title="">
-                    <span>Given I have initialized the ExtentReport</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I create a feature named "Sample Feature"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I create a scenario named "Sample Scenario"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I create a step named "Sample Step"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I log step info "This is a sample step info"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>Then the report should be generated successfully</span>
-                    
-
-                    
-
-                  </div>
-              </div>
-            </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab">
-          <div class="card-title">
-            <div class="node" id="38"><span class="badge log fail-bg mr-2">Fail</span>Scenario: SampleScenario3</div>
-          </div>
-        </div>
-            <div class="">
-              <div class="card-body">
-                
-
-                  <div class="step pass-bg" title="">
-                    <span>Given I have initialized the ExtentReport</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I create a feature named "Sample Feature"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step fail-bg" title="">
-                    <span>When I create a scenario named y "Sample Scenario"</span>
-                    
-    <div>
-<span class='badge white-text red'>2025-01-25 15:25:56 - FAIL - This step should fail</span>    </div>
-
-                    
-
-  <div class="row mb-3">
-   <div class="col-md-3">
-     <img data-featherlight='D:\vscode\SimpleSpecflowExtentReport\TestResults\SampleScenario3.png' src="D:\vscode\SimpleSpecflowExtentReport\TestResults\SampleScenario3.png">
-  </div>
- </div>
-
-                  </div>
-              </div>
-            </div>
-      </div>
-  </div>
-           </div>
-        </li>
-        <li class="test-item" status="fail" test-id="42"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">SampleFeature</p>
-            <p class="text-sm">
-              <span>15:25:58</span> / <span>0h:0m:5s+467ms</span>
-              <span class="badge fail-bg log float-right">Fail</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-            <div class="detail-head">
-              <div class="p-v-10">
-                <div class="info">
-                  <h5 class="test-status text-fail">SampleFeature</h5>
-                  <span class='badge badge-success'>25/01/2025 15:25:58</span>
-                  <span class='badge badge-danger'>25/01/2025 15:26:03</span>
-                  <span class='badge badge-default'>0h:0m:5s+467ms</span>
-                  &middot; <span class='uri-anchor badge badge-default'>#test-id=42</span>
-                  <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-                  <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-                  <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-                </div>
-              </div>
-            </div>
-
-
-  <div class="accordion mt-4">
-      <div class="card">
-        <div class="card-header" role="tab">
-          <div class="card-title">
-            <div class="node" id="43"><span class="badge log pass-bg mr-2">Pass</span>Scenario: SampleScenario</div>
-          </div>
-        </div>
-            <div class="collapse">
-              <div class="card-body">
-                
-
-                  <div class="step pass-bg" title="">
-                    <span>Given I have initialized the ExtentReport</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I create a feature named "Sample Feature"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I create a scenario named "Sample Scenario"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I create a step named "Sample Step"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I log step info "This is a sample step info"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>Then the report should be generated successfully</span>
-                    
-
-                    
-
-                  </div>
-              </div>
-            </div>
-      </div>
-      <div class="card">
-        <div class="card-header" role="tab">
-          <div class="card-title">
-            <div class="node" id="50"><span class="badge log fail-bg mr-2">Fail</span>Scenario: SampleScenario1</div>
-          </div>
-        </div>
-            <div class="">
-              <div class="card-body">
-                
-
-                  <div class="step pass-bg" title="">
-                    <span>Given I have initialized the ExtentReport</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I create a feature named "Sample Feature"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I create a scenario named "Sample Scenario"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step pass-bg" title="">
-                    <span>When I create a step named "Sample Step"</span>
-                    
-
-                    
-
-                  </div>
-                  <div class="step fail-bg" title="">
-                    <span>When I log step info y "This is a sample step info"</span>
-                    
-    <div>
-<span class='badge white-text red'>2025-01-25 15:26:03 - FAIL - This step should fail</span>    </div>
-
-                    
-
-  <div class="row mb-3">
-   <div class="col-md-3">
-     <img data-featherlight='D:\vscode\SimpleSpecflowExtentReport\TestResults\SampleScenario1.png' src="D:\vscode\SimpleSpecflowExtentReport\TestResults\SampleScenario1.png">
-  </div>
- </div>
 
                   </div>
               </div>
@@ -651,25 +163,25 @@
     <div class="col-md-3">
       <div class="card"><div class="card-body">
           <p class="m-b-0">Started</p>
-          <h3>25/01/2025 15:25:20</h3>
+          <h3>25/01/2025 16:54:41</h3>
       </div></div>
     </div>
     <div class="col-md-3">
       <div class="card"><div class="card-body">
           <p class="m-b-0">Ended</p>
-          <h3>25/01/2025 15:26:05</h3>
+          <h3>25/01/2025 16:55:06</h3>
       </div></div>
     </div>
     <div class="col-md-3">
       <div class="card"><div class="card-body">
           <p class="m-b-0 text-pass">Features Passed</p>
-          <h3>0</h3>
+          <h3>1</h3>
       </div></div>
     </div>
     <div class="col-md-3">
       <div class="card"><div class="card-body">
           <p class="m-b-0 text-fail">Features Failed</p>
-          <h3>3</h3>
+          <h3>0</h3>
       </div></div>
     </div>
   </div>
@@ -685,12 +197,12 @@
           </div>
         </div>
         <div class="card-footer">
-          <div><small data-tooltip='0%'>
-            <b>0</b> features passed
+          <div><small data-tooltip='1%'>
+            <b>1</b> features passed
             </small>
           </div>
           <div>
-            <small data-tooltip='1%'><b>3</b> features failed, 
+            <small data-tooltip='0%'><b>0</b> features failed, 
             <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
             </small>
           </div>
@@ -708,9 +220,9 @@
           </div>
         </div>
         <div class="card-footer">
-          <div><small data-tooltip='0%'><b>8</b> scenarios passed</small></div>
+          <div><small data-tooltip='1%'><b>1</b> scenarios passed</small></div>
           <div>
-            <small data-tooltip='0%'><b>3</b> scenarios failed, 
+            <small data-tooltip='0%'><b>0</b> scenarios failed, 
             <b>0</b> skipped, <b data-tooltip='%'>0</b> others
             </small>
           </div>
@@ -726,7 +238,7 @@
     </div>
   </div></div>
   <script>
-	var timeline = { "Calculate addition of two numbers":26637.2555,"SampleFeatureAgain":5897.5838,"SampleFeature":5467.454 };
+	var timeline = { "Launch webpage and validate some elements":21412.0576 };
   </script>
   <div class="row">
       <div class="col-md-4 sysenv-container">
@@ -755,15 +267,15 @@
 </div>
 <script>
   var statusGroup = {
-    parentCount: 3,
-    childCount: 11,
-    grandChildCount: 41,
-    eventsCount: 3,
+    parentCount: 1,
+    childCount: 1,
+    grandChildCount: 3,
+    eventsCount: 0,
 
-passParent:0,failParent:3,warningParent:0,skipParent:0,    
-passChild:8,failChild:3,warningChild:0,skipChild:0,infoChild:0,    
-passGrandChild:38,failGrandChild:3,warningGrandChild:0,skipGrandChild:0,infoGrandChild:0,    
-passEvents:0,failEvents:3,warningEvents:0,skipEvents:0,infoEvents:0,  };
+passParent:1,failParent:0,warningParent:0,skipParent:0,    
+passChild:1,failChild:0,warningChild:0,skipChild:0,infoChild:0,    
+passGrandChild:3,failGrandChild:0,warningGrandChild:0,skipGrandChild:0,infoGrandChild:0,    
+passEvents:0,failEvents:0,warningEvents:0,skipEvents:0,infoEvents:0,  };
 </script>
 
     </div>

@@ -822,6 +822,12 @@
           "build/Selenium.WebDriver.targets": {}
         }
       },
+      "Selenium.WebDriver.MSEdgeDriver/131.0.2903.48": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.MSEdgeDriver.targets": {}
+        }
+      },
       "SpecFlow/3.9.40": {
         "type": "package",
         "dependencies": {
@@ -3458,6 +3464,23 @@
         "manager/windows/selenium-manager.exe",
         "selenium.webdriver.4.6.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
+      ]
+    },
+    "Selenium.WebDriver.MSEdgeDriver/131.0.2903.48": {
+      "sha512": "ZMdhGorLfRpHcrFNCmJPH3M/Is6e//tGUaklATjeQbOclh+0v7JuiifvBr5kWRD3jLGPNrWk+M98CmcB3vW5sA==",
+      "type": "package",
+      "path": "selenium.webdriver.msedgedriver/131.0.2903.48",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "build/DefinePropertiesMSEdgeDriver.targets",
+        "build/Selenium.WebDriver.MSEdgeDriver.targets",
+        "driver/win32/msedgedriver.exe",
+        "driver/win64/msedgedriver.exe",
+        "selenium.webdriver.msedgedriver.131.0.2903.48.nupkg.sha512",
+        "selenium.webdriver.msedgedriver.nuspec"
       ]
     },
     "SpecFlow/3.9.40": {
@@ -6662,6 +6685,7 @@
       "Microsoft.NET.Test.Sdk >= 17.0.0",
       "NUnit3TestAdapter >= 4.1.0",
       "Selenium.WebDriver >= 4.6.0",
+      "Selenium.WebDriver.MSEdgeDriver >= 131.0.2903.48",
       "SpecFlow.NUnit >= 3.9.40",
       "SpecFlow.Plus.LivingDocPlugin >= 3.9.57",
       "nunit >= 3.13.2"
@@ -6723,6 +6747,10 @@
           "Selenium.WebDriver": {
             "target": "Package",
             "version": "[4.6.0, )"
+          },
+          "Selenium.WebDriver.MSEdgeDriver": {
+            "target": "Package",
+            "version": "[131.0.2903.48, )"
           },
           "SpecFlow.NUnit": {
             "target": "Package",
