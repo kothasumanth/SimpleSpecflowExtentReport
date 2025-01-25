@@ -1,8 +1,0 @@
-<configuration>
-    <reportName>Automation Status Report-S</reportName>
-    <documentTitle>s_Automation Status Report</documentTitle>
-    <theme>dark</theme>
-    <contributors>
-        <contributor>kotha.sumanth@gmail.com</contributor>
-    </contributors>
-</configuration>
