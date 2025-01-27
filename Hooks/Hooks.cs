@@ -80,7 +80,7 @@ namespace SimpleSpecflowExtentReport.Hooks
             var driver = _container.Resolve<IWebDriver>();
             if (scenarioContext.TestError != null)
             {
-                ExtentReport.LogStepInfo("fail", scenarioContext.TestError.Message);
+                ExtentReport.Log("fail", scenarioContext.TestError.Message);
                 //Take screenshot
                 ExtentReport.LogScreenshot(driver, scenarioContext);
             }

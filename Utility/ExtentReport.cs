@@ -82,10 +82,10 @@ namespace SimpleSpecflowExtentReport.Utility
             return screenshotLocation;
         }
 
-        public static void LogStepInfo(string statusType, string status)
+        public static void Log(string statusType, string message)
         {
             string timeStamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            string Message = $"{timeStamp} - {statusType.ToUpper().Trim()} - {status}";
+            string Message = $"{timeStamp} - {statusType.ToUpper().Trim()} - {message}";
             switch (statusType.ToLower().Trim())
             {
                 case "info":
