@@ -1,8 +1,8 @@
 <configuration>
-    <reportName>Nexus Automation Report</reportName>
-    <documentTitle>Nexus Automation Test Results</documentTitle>
+    <reportName>Automation Report</reportName>
+    <documentTitle>Automation Test Results</documentTitle>
     <theme>Dark</theme>
-    <browsers>
+    <!-- <browsers>
         <browser name="Edge">
             <param name="Browser" value="Edge"/>
             <param name="DriverPath" value="path/to/edge/driver"/>
@@ -11,5 +11,5 @@
             <param name="Browser" value="Chrome"/>
             <param name="DriverPath" value="path/to/chrome/driver"/>
         </browser>
-    </browsers>
+    </browsers> -->
 </configuration>

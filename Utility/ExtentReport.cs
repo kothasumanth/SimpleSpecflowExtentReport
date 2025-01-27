@@ -27,7 +27,7 @@ namespace SimpleSpecflowExtentReport.Utility
                 extent = new ExtentReports();
                 // Add system info (optional)
                 extent.AddSystemInfo("Browser", "Edge");
-                extent.AddSystemInfo("Tester", "s_kotha@qatarenergy.qa");
+                extent.AddSystemInfo("Tester", "kotha.sumanth@gmail.com");
                 extent.AttachReporter(sparkReporter);
             }
             catch (Exception ex)
